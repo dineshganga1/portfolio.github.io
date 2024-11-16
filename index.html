@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <div class="menu-icon" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="mailto:dg28346n@pace.edu">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/dinesh-gangavaram-36a087227/">Know More</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Graduate student</p>
+            <h1>Hi, I'm <span>Dinesh Ganagavaram</span> <br> From India</h1>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!------------------About Section----------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/pic.png" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        <br>Hello! I'm Ganagavaram Dinesh,born March 06, 2001 is an Indian citizen. Growing up as the youngest in his joint family. He lived in a village called <a href="https://www.google.com/maps/place/B.Kammapalli+Ramalayam+Temple/@14.0368752,79.3438707,16.72z/data=!4m14!1m7!3m6!1s0x3bb2d586e722ac7d:0x321330210898c76!2sGangavaram+dinesh!8m2!3d14.0372375!4d79.3446923!16s%2Fg%2F11rhs37_2c!3m5!1s0x3bb2d57077e06e0b:0xa53c9518e454f876!8m2!3d14.03815!4d79.3445652!16s%2Fg%2F11gf9dqgx9?entry=ttu">B. Kammapalli</a>, also known as the place of unity.
+                        <br>
+                        <br>At the age of 11, in 7th grade, I developed a keen interest in mathematics, inspired by my teacher, Mr. Babu Korlagunta. This interest led me to solve math puzzles and problems, and eventually, I competed in the International Mathematics Olympiad (IMO), where I ranked first among 196 students.
+                        <br>
+                        <br>My passion for technology and problem-solving started with an early fascination with math puzzles, which naturally led me to explore the world of tech and data. Tackling complex math and tech challenges has shaped my approach to projects, making me analytical and driven to find efficient solutions.
+                        <br>
+                        <br>I'm a sports enthusiast and love staying active through activities like badminton,volley ball,cricket. Sports keep me disciplined and focused, and they help me build resilience, both mentally and physically.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(this, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(this, 'Projects')">Projects</p> 
+                        <p class="tab-links" onclick="opentab(this, 'education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-end Development Skills</span><br>Proficiency in HTML, CSS, and JavaScript.</li>
+                            <li><span>Version Control</span><br>Proficiency in using Git and GitHub for version control and collaboration.</li>
+                            <li><span>UI/UX Design</span><br>Understanding of user interface and user experience design principles.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Projects">
+                        <ul>
+                            <li><span>2023</span><br>Walmart Sales Data Analysis SQL</li>
+                            <li><span>2022</span><br>Project on Smart Irrigation and Crop Protection</li>
+                            <li><span>2019</span><br>Python Programming by University of Michigan</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024</span><br>Masters in computer science at pace university, New York</li>
+                            <li><span>2022</span><br>Undergraduate at Annamacharya Institute of Technology and Sciences</li>
+                            <li><span>2018</span><br>Intermediate at Sri Chaitanya Jr College</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(element, tabname) { 
+        for (var tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (var tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        element.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    function toggleMenu() {
+        var navLinks = document.getElementById('nav-links');
+        if (navLinks.classList.contains('show')) {
+            navLinks.classList.remove('show');
+        } else {
+            navLinks.classList.add('show');
+        }
+    }
+</script>
+
+</body>
+</html>
